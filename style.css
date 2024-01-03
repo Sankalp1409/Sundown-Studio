@@ -830,7 +830,7 @@ nav h3 {
     padding: 0vw 1vw;
   }
   #full-div1 {
-    height: 50%;
+    height: 35%;
     width: 100%;
     background: #efeae3;
     border-bottom-left-radius: 30px;
@@ -844,7 +844,7 @@ nav h3 {
   #full-div1 h1 {
     display: inline-block;
     display: flex;
-    font-size: 8vw;
+    font-size: 6vw;
     color: black;
     font-family: neu;
   }
@@ -1047,17 +1047,17 @@ nav h3 {
   }
 
   #page3 {
-    min-height: 100vh;
+    min-height: 75vh;
     width: 100%;
     background-color: #efeae3;
     /* position: relative; */
-    padding: 8vh 0;
+    padding: 3vh 0;
   }
   .feature {
     /* border: 2px solid red; */
-    padding: 0 2vw;
+    padding: 0 0vw;
     padding-top: 0vw;
-    padding-bottom: 6vw;
+    padding-bottom: 4vw;
     letter-spacing: 0.05vw;
   }
   .feature h2 {
@@ -1112,8 +1112,8 @@ nav h3 {
     position: fixed;
     z-index: 99;
     border-radius: 10px;
-    left: 53%;
-    top: 22%;
+    left: 55%;
+    top: 50%;
     display: none;
     background-position: center;
     background-size: cover;
@@ -1294,7 +1294,7 @@ nav h3 {
   }
 
   .swiper-slide {
-    font-size: 12px;
+    font-size: 2.5vw;
     border-left: 0.5px solid #504a45;
     padding: 0 2vw;
   }
@@ -1306,7 +1306,7 @@ nav h3 {
   }
 
   .swiper-slide {
-    width: 30%;
+    width: 37%;
   }
 
   #page5 {
@@ -1319,7 +1319,7 @@ nav h3 {
   #footer {
     position: fixed;
     /* z-index: 9; */
-    height: 100vh;
+    height: 65vh;
     width: 100%;
     bottom: 0;
     font-family: "Neue Haas Grotesk Display Pro";
@@ -1336,7 +1336,7 @@ nav h3 {
     /* padding: 0 2vw; */
     margin-top: 20vw;
     /* margin-bottom: 2vw; */
-    font-size: 18vw;
+    font-size: 16vw;
     border-bottom: 1px solid white;
   }
 
