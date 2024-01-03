@@ -1,0 +1,1625 @@
+@font-face {
+  font-family: neu;
+  src: url(./Neuehaasdisplay/NeueHaasDisplayMediu.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#main {
+  /* background-color: black; */
+  position: relative;
+  z-index: 10;
+}
+
+#page1 {
+  min-height: 100vh;
+  background-color: #efeae3;
+  width: 100%;
+  position: relative;
+  padding: 0vh 2vw;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vh 0vw;
+  position: relative;
+  z-index: 200;
+}
+.nav-part2 {
+  display: flex;
+  gap: 0.75vw;
+  position: relative;
+}
+nav h3 {
+  display: none;
+}
+.nav-part2 h4 {
+  border: 0.5px solid #b6b1aa;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Neue Haas Grotesk Display Pro";
+  padding: 2vh 2vw;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all ease 0.3s;
+}
+
+.nav-part2 h4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+.nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+  color: white;
+}
+
+.nav-part2 h4 a {
+  text-decoration: none;
+  color: black;
+  z-index: 1;
+  position: relative;
+}
+
+.nav-part2 h4:hover a {
+  color: white;
+}
+
+/* Center div  */
+
+#center {
+  margin-top: 25vh;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #c7c3bd;
+  padding-bottom: 10vh;
+}
+
+#left p {
+  font-family: neu;
+  font-size: 2vw;
+  line-height: 1.75vw;
+  font-weight: 700;
+  width: 30vw;
+}
+
+#right h1 {
+  font-family: neu;
+  font-size: 10vw;
+  line-height: 8vw;
+  font-weight: 500;
+  text-align: right;
+  /* width: 30vw; */
+}
+
+/* Animation Code */
+#shape {
+  width: 50vw;
+  height: 45vw;
+  background-color: #fe5d1a;
+  position: absolute;
+  right: 0;
+  top: 105vh;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  filter: blur(20px);
+}
+
+#shape-1 {
+  width: 45vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: #fe330a;
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation-timing-function: linear; */
+  filter: blur(20px);
+}
+
+#shape-2 {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: #fe330a;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation-timing-function: linear; */
+}
+#shape-3 {
+  width: 45vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: #fe330a;
+  position: absolute;
+  animation-name: anime3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation-timing-function: linear; */
+  filter: blur(20px);
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(-10%, 10%);
+  }
+  to {
+    transform: translate(10%, -12%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(-30%, -10%);
+  }
+  to {
+    transform: translate(10%, 8%);
+  }
+}
+@keyframes anime3 {
+  from {
+    transform: translate(-15%, 0%);
+  }
+  to {
+    transform: translate(15%, 0%);
+  }
+}
+
+/* Video coding */
+#page1 video {
+  margin-top: 15vh;
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Moving text */
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  background: #efeae3;
+  position: relative;
+}
+
+#moving-text {
+  padding: 10vh 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar {
+  display: none;
+}
+.con {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+  font-size: 10vw;
+  font-family: neu;
+  display: inline-block;
+}
+
+.gola {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-color: #fe330a;
+  display: inline-block;
+  margin: 1vw 1vw;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* page-2 coding */
+
+#page2-bottom {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: lightblue; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 3vw;
+  position: relative;
+  z-index: 9;
+}
+
+#page2-bottom h1 {
+  position: relative;
+  font-size: 4.5vw;
+  font-family: neu;
+  /* padding: 0 3vw; */
+  width: 60%;
+  line-height: 5vw;
+  /* border: 2px solid red; */
+}
+
+#bottom-part2 {
+  margin-top: 18vw;
+  /* border: 2px solid red; */
+  width: 25%;
+}
+
+#bottom-part2 img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#bottom-part2 p {
+  margin-top: 3vw;
+  line-height: 1.75vw;
+  font-family: "Neue Haas Grotesk Display Pro";
+}
+
+/* Page 2 animation */
+
+#page2 #gooey {
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  background-color: #ff7a26;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  animation-name: g2;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: blur(20px);
+}
+
+#gooey1 {
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  background-color: #fe330a;
+  position: absolute;
+  animation-name: g1;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: blur(20px);
+}
+
+@keyframes g1 {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(-15%, 3%);
+  }
+}
+
+@keyframes g2 {
+  from {
+    transform: translate(-10%, -5%);
+  }
+  to {
+    transform: translate(5%, 3%);
+  }
+}
+
+/* Page3 coding */
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  /* position: relative; */
+  padding: 8vh 0;
+}
+.feature {
+  /* border: 2px solid red; */
+  padding: 0 2vw;
+  padding-top: 2vw;
+  padding-bottom: 4vw;
+  letter-spacing: 0.05vw;
+}
+.feature h2 {
+  font-size: 1vw;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-weight: 200;
+  display: inline-block;
+}
+
+.feature #circle {
+  width: 0.75vw;
+  height: 0.75vw;
+  border-radius: 50%;
+  background-color: #fe330a;
+  display: inline-block;
+}
+.elem {
+  width: 100%;
+  height: 8vw;
+  position: relative;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #c1bbb5;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.elem h1 {
+  font-size: 4vw;
+  position: relative;
+  font-family: neu;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #ff9831;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition-duration: 0.2s;
+}
+
+.elem:hover .overlay {
+  top: 0;
+}
+
+#fixed-image {
+  width: 22vw;
+  height: 28vw;
+  position: fixed;
+  z-index: 99;
+  border-radius: 10px;
+  left: 53%;
+  top: 22%;
+  display: none;
+  background-position: center;
+  background-size: cover;
+  transition: all ease 0.1s;
+}
+.elem h2 {
+  font-size: 1.25vw;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-weight: 200;
+  display: inline-block;
+  position: relative;
+}
+
+.elem h4 {
+  font-size: 1vw;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-weight: 400;
+  /* display: inline-block; */
+  position: relative;
+  color: #a4a3a1;
+}
+#elem-right {
+  text-align: right;
+}
+
+#page3 .nav-part2 {
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  padding: 0 2vw;
+}
+
+/* Page coding */
+#page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 0 3vw;
+}
+
+#page-center {
+  height: 50vw;
+  width: 100%;
+  background-color: red;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+}
+
+#page-left {
+  height: 100%;
+  width: 45%;
+  background-color: black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+#page-heading {
+  position: relative;
+  cursor: pointer;
+}
+
+#page-heading h1 {
+  font-size: 5vw;
+  font-family: neu;
+  padding: 0 1vw;
+}
+#page-heading .vertical {
+  content: "";
+  height: 6vw;
+  position: absolute;
+  left: 0%;
+}
+#vertical2,
+#vertical3 {
+  border-left: 2px solid #504a45;
+}
+#project,
+#execution {
+  color: #504a45;
+}
+#vertical1 {
+  border-left: 2px solid #fe330a;
+}
+
+#design {
+  color: white;
+}
+
+#page-left p {
+  color: white;
+  width: 25vw;
+  font-family: "Neue Haas Grotesk Display Pro";
+  line-height: 1.75vw;
+  transition: all ease 1s;
+}
+
+#page-right {
+  height: 100%;
+  width: 55%;
+  background-color: black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#page-right img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* Swiper Code */
+#page4 {
+  height: 55vw;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 17vw 0;
+  position: relative;
+}
+
+#cursor {
+  width: 5vw;
+  height: 5vw;
+  background-color: #fe330a;
+  border-radius: 50%;
+  position: absolute;
+  transition: all ease 1s;
+  display: none;
+}
+.swiper {
+  font-family: "Neue Haas Grotesk Display Pro";
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  border-left: 0.5px solid #504a45;
+  padding: 0 2vw;
+}
+
+.swiper-slide img {
+  margin-bottom: 3vw;
+}
+
+.swiper-slide {
+  width: 30%;
+}
+
+#page5 {
+  height: 60vw;
+  width: 100%;
+}
+
+/* Footer Coding */
+
+#footer {
+  position: fixed;
+  /* z-index: 9; */
+  height: 100vh;
+  width: 100%;
+  bottom: 0;
+  font-family: "Neue Haas Grotesk Display Pro";
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer h1 {
+  text-align: end;
+  /* padding: 0 2vw; */
+  margin-bottom: 2vw;
+  font-size: 22vw;
+  border-bottom: 1px solid white;
+}
+
+#footer-div {
+  width: 100%;
+  height: 15vw;
+  background-color: #fe330a;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9;
+  background-blend-mode: lighten;
+  /* border: 0.5px solid transparent; */
+}
+
+#footer-blur {
+  width: 100%;
+  height: 120%;
+  background-color: #fe330a;
+  position: absolute;
+}
+#footer-div-left h2 {
+  padding: 0 5vw;
+  /* margin-left: -30vw; */
+  font-size: 2vw;
+  position: relative;
+}
+
+#footer-div-right {
+  font-size: 1.5vw;
+  /* border: 2px solid yellow; */
+  width: 35vw;
+  margin-right: 5vw;
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  font-family: "Neue Haas Grotesk Display Pro";
+}
+
+#footer-div-right p {
+  position: relative;
+}
+#footer-div-right input {
+  margin-top: 3vh;
+  height: 3vw;
+  width: 30vw;
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid #c7c3bd;
+  display: inline-block;
+  position: relative;
+  /* border: 2px solid black; */
+}
+#footer-div-right input::placeholder {
+  color: #c1bbb5;
+}
+
+#search {
+  white-space: nowarp;
+  display: flex;
+  align-items: center;
+}
+
+#footer-shape-left {
+  width: 25vw;
+  height: 20vw;
+  border-radius: 50%;
+  background: #fe5e1b;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 40%;
+  left: -5%;
+  animation-name: leftrec;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-filter: blur(20px);
+}
+
+#footer-shape-right {
+  width: 25vw;
+  height: 35vw;
+  border-radius: 50%;
+  background: #fe330a;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0%;
+  right: -5%;
+  animation-name: rightrec;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-filter: blur(40px);
+}
+
+#circle-left {
+  width: 40vw;
+  height: 25vw;
+  background-color: #fe330a;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 15%;
+  animation-name: leftcircle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-filter: blur(30px);
+}
+#circle-right {
+  width: 40vw;
+  height: 25vw;
+  background-color: #fe5e1b;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  right: 15%;
+  animation-name: rightcircle;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-filter: blur(40px);
+}
+
+@keyframes leftrec {
+  from {
+    transform: translate(-10%, 10%);
+  }
+  to {
+    transform: translate(5%, 5%);
+  }
+}
+
+@keyframes rightrec {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(-10%, 5%);
+  }
+}
+@keyframes leftcircle {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(-10%, 10%);
+  }
+}
+
+@keyframes rightcircle {
+  from {
+    transform: translate(-10%, -20%);
+  }
+  to {
+    transform: translate(10%, 5%);
+  }
+}
+
+#full-scr {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: -100%;
+  background-color: rgba(0, 0, 0, 0.263);
+  z-index: 11;
+  transition: all ease 0.5s;
+}
+
+#footer-bottom {
+  padding: 0 2vw;
+  padding-bottom: 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-bottom div {
+  font-size: 1.5vw;
+  font-weight: 200;
+  font-family: "Neue Haas Grotesk Display Pro";
+}
+
+#h3-img {
+  /* padding: 0.5vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue;
+  border: 2px solid red; */
+}
+
+#h3-img img {
+  margin-top: 0.25vw;
+}
+/* Responsive code  */
+
+@media (max-width: 600px) {
+  #page1 {
+    min-height: 100vh;
+    background-color: #efeae3;
+    width: 100vw;
+    position: relative;
+    padding: 0vh 0vw;
+  }
+
+  nav {
+    padding: 6vh 4vw;
+    position: relative;
+    background-color: #efeae3;
+  }
+  .nav-part2 {
+    display: flex;
+    gap: 0.75vw;
+    position: relative;
+    display: none;
+  }
+
+  nav h3 {
+    display: block;
+    border: 1px solid #b6b1aa;
+    border-radius: 50px;
+    padding: 3vw 5vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-weight: 200;
+    font-size: 4vw;
+  }
+
+  nav img {
+    transition: all ease 0.4s;
+    padding: 0vw 1vw;
+  }
+  #full-div1 {
+    height: 50%;
+    width: 100%;
+    background: #efeae3;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    padding: 4vw;
+  }
+
+  #full-div1 h1 {
+    display: inline-block;
+    display: flex;
+    font-size: 8vw;
+    color: black;
+    font-family: neu;
+  }
+
+  #center {
+    margin-top: 0vh;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #c7c3bd;
+    padding: 0 4vw;
+    /* padding-bottom: 4vh; */
+    /* background-color: red; */
+    flex-direction: column-reverse;
+  }
+
+  #left p {
+    font-family: neu;
+    font-size: 4vw;
+    line-height: 4vw;
+    font-weight: 700;
+    width: 60vw;
+    padding: 0 2vw;
+  }
+
+  #right h1 {
+    margin-left: 35vw;
+    /* border: 2px solid blue; */
+    padding: 4vw 0vw;
+    font-family: neu;
+    font-size: 14vw;
+    line-height: 15vw;
+    font-weight: 500;
+    text-align: right;
+    /* width: 30vw; */
+  }
+
+  /* Animation Code */
+  #shape {
+    overflow: hidden;
+    width: 50vw;
+    height: 45vw;
+    background-color: #fe5d1a;
+    position: absolute;
+    right: 0;
+    top: 80vh;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    filter: blur(20px);
+  }
+
+  #shape-1 {
+    width: 45vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: #fe330a;
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-timing-function: linear; */
+    filter: blur(20px);
+  }
+
+  #shape-2 {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: #fe330a;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-timing-function: linear; */
+  }
+  #shape-3 {
+    width: 45vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: #fe330a;
+    position: absolute;
+    animation-name: anime3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation-timing-function: linear; */
+    filter: blur(20px);
+  }
+
+  /* Video coding */
+  #page1 video {
+    margin-top: 5vw;
+    margin-left: 5vw;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  /* page-2 coding */
+
+  #page2-bottom {
+    min-height: 45vh;
+    width: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 4vw;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+  }
+
+  #page2-bottom h1 {
+    position: relative;
+    font-size: 7vw;
+    font-family: neu;
+    /* padding: 0 3vw; */
+    width: 90%;
+    line-height: 7vw;
+    /* border: 2px solid red; */
+  }
+
+  #bottom-part2 {
+    margin-right: 20vw;
+    margin-top: 18vw;
+    /* border: 2px solid red; */
+    width: 61%;
+  }
+
+  #bottom-part2 img {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #bottom-part2 p {
+    margin-top: 3vw;
+    line-height: 4vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+  }
+
+  /* Page 2 animation */
+
+  #page2 #gooey {
+    overflow-x: hidden;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 50%;
+    background-color: #ff7a26;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    animation-name: g2;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: blur(20px);
+  }
+
+  #gooey1 {
+    overflow: hidden;
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    background-color: #fe330a;
+    position: absolute;
+    animation-name: g1;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: blur(20px);
+  }
+
+  @keyframes g1 {
+    from {
+      transform: translate(20%, -30%);
+    }
+    to {
+      transform: translate(-15%, 3%);
+    }
+  }
+
+  @keyframes g2 {
+    from {
+      transform: translate(10%, -10%);
+    }
+    to {
+      transform: translate(-10%, 3%);
+    }
+  }
+
+  #page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    /* position: relative; */
+    padding: 8vh 0;
+  }
+  .feature {
+    /* border: 2px solid red; */
+    padding: 0 2vw;
+    padding-top: 0vw;
+    padding-bottom: 6vw;
+    letter-spacing: 0.05vw;
+  }
+  .feature h2 {
+    font-size: 2.5vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-weight: 200;
+    display: inline-block;
+  }
+
+  .feature #circle {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background-color: #fe330a;
+    display: inline-block;
+  }
+  .elem {
+    width: 100%;
+    height: 12vw;
+    position: relative;
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c1bbb5;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+  .elem h1 {
+    font-size: 6vw;
+    position: relative;
+    font-family: neu;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #ff9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition-duration: 0.2s;
+  }
+
+  .elem:hover .overlay {
+    top: 0;
+  }
+
+  #fixed-image {
+    width: 22vw;
+    height: 28vw;
+    position: fixed;
+    z-index: 99;
+    border-radius: 10px;
+    left: 53%;
+    top: 22%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+    transition: all ease 0.1s;
+  }
+  .elem h2 {
+    font-size: 3vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-weight: 200;
+    display: inline-block;
+    position: relative;
+  }
+
+  .elem h4 {
+    font-size: 2vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+    font-weight: 400;
+    /* display: inline-block; */
+    position: relative;
+    color: #a4a3a1;
+  }
+  #elem-right {
+    text-align: right;
+  }
+
+  #page3 .nav-part-1 {
+    /* border: 2px solid red; */
+    margin-top: 6vw;
+    margin-bottom: 0vw;
+    padding: 0 2vw;
+    display: flex;
+    gap: 0.75vw;
+    position: relative;
+  }
+  .nav-part-1 h4 {
+    border: 0.5px solid #b6b1aa;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Neue Haas Grotesk Display Pro";
+    padding: 2vh 2vw;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.3s;
+  }
+
+  .nav-part-1 h4::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+  }
+
+  .nav-part-1 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+    color: white;
+  }
+
+  .nav-part-1 h4 a {
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    position: relative;
+  }
+  #page {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 0 3vw;
+  }
+
+  #page-center {
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #page-left {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    display: block;
+    padding: 10vw 25vw;
+    position: relative;
+    gap: 2vw;
+  }
+  #page-heading {
+    position: relative;
+    cursor: pointer;
+  }
+
+  #page-heading h1 {
+    font-size: 8vw;
+    font-family: neu;
+    padding: 0 1vw;
+  }
+  #page-heading .vertical {
+    content: "";
+    height: 10vw;
+    position: absolute;
+    left: 0%;
+  }
+  #vertical2,
+  #vertical3 {
+    border-left: 2px solid #504a45;
+  }
+  #project,
+  #execution {
+    color: #504a45;
+  }
+  #vertical1 {
+    border-left: 2px solid #fe330a;
+  }
+
+  #design {
+    color: white;
+  }
+
+  #page-left p {
+    margin-top: 2vw;
+    color: white;
+    width: 60vw;
+    font-family: "Neue Haas Grotesk Display Pro";
+    line-height: 3vw;
+    transition: all ease 1s;
+  }
+
+  #page-right {
+    height: 40%;
+    width: 100%;
+    /* background-color: black; */
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  #page-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+  }
+
+  #page4 {
+    height: 55vw;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 15vw 0;
+    position: relative;
+  }
+
+  #cursor {
+    width: 5vw;
+    height: 5vw;
+    background-color: #fe330a;
+    border-radius: 50%;
+    position: absolute;
+    transition: all ease 1s;
+    display: none;
+  }
+  .swiper {
+    font-family: "Neue Haas Grotesk Display Pro";
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .swiper-slide {
+    font-size: 12px;
+    border-left: 0.5px solid #504a45;
+    padding: 0 2vw;
+  }
+
+  .swiper-slide img {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 0vw;
+  }
+
+  .swiper-slide {
+    width: 30%;
+  }
+
+  #page5 {
+    height: 93vw;
+    width: 100%;
+  }
+
+  /* Footer Coding */
+
+  #footer {
+    position: fixed;
+    /* z-index: 9; */
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    font-family: "Neue Haas Grotesk Display Pro";
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #footer h1 {
+    text-align: end;
+    /* padding: 0 2vw; */
+    margin-top: 20vw;
+    /* margin-bottom: 2vw; */
+    font-size: 18vw;
+    border-bottom: 1px solid white;
+  }
+
+  #footer-div {
+    width: 100%;
+    height: 60vw;
+    background-color: #fe330a;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+    background-blend-mode: lighten;
+    /* border: 0.5px solid transparent; */
+  }
+
+  #footer-div-left {
+    margin-top: 25vw;
+  }
+  #footer-div-left h2 {
+    padding: 0 5vw;
+    /* margin-left: -30vw; */
+    font-size: 8vw;
+    position: relative;
+  }
+
+  #footer-div-right {
+    font-size: 1.5vw;
+    margin-top: 30vw;
+    /* border: 2px solid yellow; */
+    width: 40vw;
+    margin-right: 5vw;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    font-family: "Neue Haas Grotesk Display Pro";
+  }
+
+  #footer-div-right p {
+    position: relative;
+    font-size: 3vw;
+  }
+  #footer-div-right input {
+    margin-top: 3vh;
+    height: 3vw;
+    width: 30vw;
+    background: none;
+    border: none;
+    border-bottom: 0.5px solid #c7c3bd;
+    display: inline-block;
+    position: relative;
+    /* border: 2px solid black; */
+  }
+  #footer-div-right input::placeholder {
+    color: #c1bbb5;
+  }
+
+  #search {
+    white-space: nowarp;
+    display: flex;
+    align-items: center;
+  }
+
+  #footer-shape-left {
+    width: 45vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: #fe5e1b;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 70%;
+    left: -5%;
+    animation-name: leftrec;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-filter: blur(20px);
+  }
+
+  #footer-shape-right {
+    width: 50vw;
+    height: 55vw;
+    border-radius: 50%;
+    background: #fe330a;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 80%;
+    right: -15%;
+    animation-name: rightrec;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-filter: blur(40px);
+  }
+
+  #circle-left {
+    width: 40vw;
+    height: 25vw;
+    background-color: #fe330a;
+    position: absolute;
+    border-radius: 50%;
+    top: 100%;
+    left: 25%;
+    animation-name: leftcircle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-filter: blur(30px);
+  }
+  #circle-right {
+    width: 40vw;
+    height: 25vw;
+    background-color: #fe5e1b;
+    position: absolute;
+    border-radius: 50%;
+    top: 100%;
+    right: 15%;
+    animation-name: rightcircle;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-filter: blur(40px);
+  }
+  @keyframes leftrec {
+    from {
+      transform: translate(-10%, 10%);
+    }
+    to {
+      transform: translate(5%, 5%);
+    }
+  }
+
+  @keyframes rightrec {
+    from {
+      transform: translate(10%, -10%);
+    }
+    to {
+      transform: translate(-10%, 5%);
+    }
+  }
+  @keyframes leftcircle {
+    from {
+      transform: translate(10%, -10%);
+    }
+    to {
+      transform: translate(-10%, 10%);
+    }
+  }
+
+  @keyframes rightcircle {
+    from {
+      transform: translate(-10%, -20%);
+    }
+    to {
+      transform: translate(10%, 5%);
+    }
+  }
+  #footer-bottom {
+    padding: 0 2vw;
+    padding-bottom: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2vw;
+  }
+
+  #footer-bottom > div {
+    font-size: 1.5vw;
+    font-weight: 200;
+    font-family: "Neue Haas Grotesk Display Pro";
+    margin: 0 2vw;
+  }
+  #h3-img {
+    /* padding: 0.5vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue;
+    border: 2px solid red; */
+  }
+
+  #h3-img img {
+    margin-top: 0.25vw;
+  }
+  #loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 1s;
+  }
+
+  #loader h1 {
+    font-family: neu;
+    font-size: 5vw;
+    position: absolute;
+    color: transparent;
+    background: linear-gradient(to right, orange, orangered);
+    -webkit-background-clip: text;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+  }
+
+  #loader h1:nth-child(2) {
+    animation-delay: 2s;
+  }
+  #loader h1:nth-child(3) {
+    animation-delay: 3s;
+  }
+
+  @keyframes load {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+#loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 1s;
+}
+
+#loader h1 {
+  font-family: neu;
+  font-size: 5vw;
+  position: absolute;
+  color: transparent;
+  background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text;
+  opacity: 0;
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
+#loader h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#loader h1:nth-child(3) {
+  animation-delay: 3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
